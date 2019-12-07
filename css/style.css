@@ -42,6 +42,276 @@ html {
     height: 100%;
 }
 
+@font-face {
+    font-family: 'Gotham';
+  src: local("Gotham"), url("../fonts/GothamMediumRegular/gotham-medium-webfont.woff2") format("woff2"), url("../fonts/GothamMediumRegular/gotham-medium-webfont.woff") format("woff"), url("../fonts/GothamMediumRegular/Gotham Medium Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+  src: local("Gotham-Book"), url("../fonts/GothamBook/GothamBook.eot"), url("../fonts/GothamBook/GothamBook.woff") format("woff"), url("../fonts/GothamBook/GothamBook.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+  src: local("Gotham"), url("../fonts/gothambold/gothambold1.eot"), url("../fonts/gothambold/gothambold1.woff") format("woff"), url("../fonts/gothambold/gothambold1.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/opensans/opensans.woff2") format("woff2"), url("../fonts/opensans/opensans.woff") format("woff"), url("../fonts/opensans/opensans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("../fonts/opensans/opensansitalic.woff2") format("woff2"), url("../fonts/opensans/opensansitalic.woff") format("woff"), url("../fonts/opensans/opensansitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+.what .what-main-header, .what .building h1 {
+    color: #2c4058;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: .75;
+    text-transform: uppercase;
+}
+
 body {
-    background-color: red;
+    background-color: #fff;
+    font-family: "Gotham";
+}
+
+header {
+    background-color: #fff;
+    position: relative;
+}
+
+header .menu {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 53px;
+}
+
+header .menu img {
+    width: 241px;
+    height: 54px;
+}
+
+header .menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+header .menu li a {
+    color: #ffffff;
+    font-family: "Gotham - Book";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 25px;
+    line-height: 54px;
+    background-image: url("../img/empty-dot.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+header .menu li a:hover {
+    background-image: url("../img//full-dot.png");
+}
+
+header .menu .menu-social {
+    display: flex;
+    width: 165px;
+    justify-content: space-between;
+}
+
+header .menu .menu-social a {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 41px;
+    height: 40px;
+    border: 1px solid #af9bfb;
+    border-radius: 50%;
+}
+
+header .menu .menu-social a img {
+    width: 20px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+header .header-slider .slick-dots {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 0;
+    right: -15vw;
+}
+
+header .header-slider .slick-dots li img:nth-child(1) {
+    display: block;
+}
+
+header .header-slider .slick-dots li img:nth-child(2) {
+    display: none;
+}
+
+header .header-slider .slick-dots li.slick-active img:nth-child(1) {
+    display: none;
+}
+
+header .header-slider .slick-dots li.slick-active img:nth-child(2) {
+    display: block;
+}
+
+header .header-slide {
+    text-align: center;
+    padding-top: 370px;
+    padding-bottom: 315px;
+    background-image: url("../img/header-slider-bg.jpg");
+}
+
+header .header-slide h1 {
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: .8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 40px;
+}
+
+header .header-slide h5 {
+    color: #ffffff;
+    font-family: "Gotham-Book";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: .8;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+}
+
+header .header-arrow {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 710px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    opacity: 0.7;
+    border-radius: 50%;
+    text-align: center;
+}
+
+header .header-arrow img {
+    padding-top: 15px;
+}
+
+.what {
+    background-color: #fff;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.what .what-main-header {
+    text-align: center;
+    position: relative;
+}
+
+.what .what-main-header:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #2c4058;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.what .building {
+    display: flex;
+    padding-top: 100px;
+}
+
+.what .building .building-picture {
+    width: 45%;
+    height: 500px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.what .building .building-picture img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.what .building .building-picture-bg {
+    width: 80%;
+    height: 80%;
+    background-color: #55b7ff;
+    position: absolute;
+    z-index: 0;
+}
+
+.what .building .building-text {
+    padding-top: 10%;
+    width: 30%;
+}
+
+.what .building h5 {
+    color: #2c4058;
+    font-family: "Gotham-Book";
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.what .building h1 {
+    color: #2c4058;
+    padding-bottom: 10px;
+}
+
+.what .building p {
+    color: #4b5562;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.what .building a {
+    text-decoration: none;
+    line-height: 56px;
+    color: #2c4058;
+    font-family: "Gotham-Book";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
 }

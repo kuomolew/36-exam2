@@ -1,10 +1,13 @@
 $(() => {
     console.log('start');
 
-    $(document).ready(function(){
-    $('.your-class').slick({
+    $('.header-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-    });
+        arrows: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            return '<a href="#"><img src="img/empty-dot.png" /><img src="../img/full-dot.png" /></a>';
+        },
     });
 });
