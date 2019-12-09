@@ -255,7 +255,6 @@ header .header-arrow img {
 
 .what .building .building-picture {
     width: 45%;
-    height: 500px;
     margin-right: 30px;
     position: relative;
 }
@@ -314,4 +313,8 @@ header .header-arrow img {
     text-transform: uppercase;
     text-align: center;
     box-sizing: border-box;
+}
+
+.what .right {
+    flex-direction: row-reverse;
 }
