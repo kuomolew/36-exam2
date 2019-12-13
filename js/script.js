@@ -39,7 +39,7 @@ $(() => {
         dots: true,
         vertical: true,
         customPaging : function(slider, i) {
-            return '<img src="img/empty-dot.png" /><img src="../img/full-dot.png" />';
+            return '<img src="img/empty-dot.png" /><img src="img/full-dot.png" />';
         },
     });
 
@@ -54,7 +54,7 @@ $(() => {
         autoplay: true,
         autoplaySpeed: 4000,
         customPaging : function(slider, i) {
-            return '<img src="img/empty-dot.png" /><img src="../img/full-dot.png" />';
+            return '<img src="img/empty-dot.png" /><img src="img/full-dot.png" />';
         },
     });
 
