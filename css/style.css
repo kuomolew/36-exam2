@@ -77,7 +77,7 @@ html {
   font-style: italic;
 }
 
-.what .what-main-header, .what .building h1 {
+.what #what-i-do, .what .building h1, .news > h1, .gallery h1 {
     color: #2c4058;
     font-size: 44px;
     font-weight: 700;
@@ -88,6 +88,7 @@ html {
 body {
     background-color: #fff;
     font-family: "Gotham";
+    font-weight: 400;
 }
 
 header {
@@ -159,10 +160,11 @@ header .menu .menu-social a img {
 }
 
 header .header-slider .slick-dots {
-    position: absolute;
-    transform: rotate(90deg);
-    top: 0;
-    right: -15vw;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+    top: 40%;
 }
 
 header .header-slider .slick-dots li img:nth-child(1) {
@@ -186,6 +188,10 @@ header .header-slide {
     padding-top: 370px;
     padding-bottom: 315px;
     background-image: url("../img/header-slider-bg.jpg");
+    background-color: lightskyblue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header .header-slide h1 {
@@ -232,12 +238,13 @@ header .header-arrow img {
     padding-bottom: 100px;
 }
 
-.what .what-main-header {
+.what #what-i-do {
     text-align: center;
     position: relative;
+    margin-bottom: 100px;
 }
 
-.what .what-main-header:before {
+.what #what-i-do:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -254,31 +261,50 @@ header .header-arrow img {
 }
 
 .what .building .building-picture {
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
+    width: 50%;
+    margin-left: 215px;
+    font-size: 0;
 }
 
 .what .building .building-picture img {
-    position: absolute;
+    box-shadow: -215px -70px #55b7ff;
     width: 80%;
     height: auto;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.what .building .building-picture-bg {
-    width: 80%;
-    height: 80%;
-    background-color: #55b7ff;
-    position: absolute;
-    z-index: 0;
 }
 
 .what .building .building-text {
-    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 30%;
+}
+
+.what .building .building-text a {
+    display: block;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #2c4058;
+    text-decoration: none;
+    line-height: 50px;
+    color: #2c4058;
+    font-family: "Gotham-Book";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+
+.what .building .building-text a:hover {
+    background-color: #2c4058;
+    color: #fff;
+}
+
+.what .building .building-text img {
+    height: 18px;
+    margin-right: 5px;
 }
 
 .what .building h5 {
@@ -292,7 +318,7 @@ header .header-arrow img {
 
 .what .building h1 {
     color: #2c4058;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .what .building p {
@@ -303,9 +329,244 @@ header .header-arrow img {
     line-height: 30px;
 }
 
-.what .building a {
+.what .building i {
+    font-style: italic;
+    color: #2c4058;
+}
+
+.what .right {
+    flex-direction: row-reverse;
+}
+
+.what .right .building-picture {
+    margin-right: 215px;
+    text-align: right;
+    margin-left: 0;
+}
+
+.what .right .building-picture img {
+    box-shadow: 215px -70px #7e5aff;
+}
+
+.what .right .building-text {
+    padding-left: 215px;
+}
+
+.news {
+    background-image: url("../img/news-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 181px;
+    padding-bottom: 209px;
+}
+
+.news > h1 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+    color: #fff;
+}
+
+.news > h1:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.news .news-slider {
+    width: 77.6%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.news .news-slider .slick-dots {
+    bottom: -60px;
+}
+
+.news .news-slider .slick-dots li img:nth-child(1) {
+    display: block;
+}
+
+.news .news-slider .slick-dots li img:nth-child(2) {
+    display: none;
+}
+
+.news .news-slider .slick-dots li.slick-active img:nth-child(1) {
+    display: none;
+}
+
+.news .news-slider .slick-dots li.slick-active img:nth-child(2) {
+    display: block;
+}
+
+.news .news-slider .slick-prev:before {
+    display: none;
+}
+
+.news .news-slider .slick-prev {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/slider-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40% auto;
+    z-index: 2;
+    border: 1px solid #cadff4;
+    border-radius: 50%;
+    left: -60px;
+}
+
+.news .news-slider .slick-prev:hover {
+    border: 1px solid #fff;
+    background-image: url("../img/slider-arrow-left-hover.svg");
+}
+
+.news .news-slider .slick-next:before {
+    display: none;
+}
+
+.news .news-slider .slick-next {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/slider-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40% auto;
+    z-index: 2;
+    border: 1px solid #cadff4;
+    border-radius: 50%;
+    right: -60px;
+}
+
+.news .news-slider .slick-next:hover {
+    border: 1px solid #fff;
+    background-image: url("../img/slider-arrow-right-hover.svg");
+}
+
+.news .news-slide {
+    width: 370px;
+    background-color: #fff;
+    padding-bottom: 30px;
+    margin: 0 15px;
+}
+
+.news .news-slide > img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.news .news-slide h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.55;
+    text-transform: uppercase;
+    padding-left: 21px;
+    padding-bottom: 15px;
+    color: #2c4058;
+    max-width: 320px;
+}
+
+.news .news-slide p {
+    color: #4b5562;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    line-height: 1.667;
+    padding-left: 21px;
+    padding-bottom: 30px;
+    max-width: 320px;
+}
+
+.news .news-slide .slide-autor {
+    padding-left: 21px;
+}
+
+.news .news-slide .slide-autor img {
+    float: left;
+    margin-right: 20px;
+}
+
+.news .news-slide .slide-autor h3 {
+    padding-top: 10px;
+    color: #2c4058;
+    font-family: "Gotham-Book";
+    font-size: 18px;
+    line-height: 1.22;
+    text-transform: uppercase;
+}
+
+.news .news-slide .slide-autor h4 {
+    color: #55b7ff;
+    font-family: "Gotham-Book";
+    font-size: 14px;
+    line-height: 1.5714;
+}
+
+.gallery {
+    padding-top: 181px;
+    padding-bottom: 139px;
+}
+
+.gallery h1 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+    color: #2c4058;
+}
+
+.gallery h1:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #2c4058;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery .gallery-wrap {
+    width: 60.93vw;
+    margin: 0 auto;
+    display: grid;
+    font-size: 0;
+    display: grid;
+    grid-template-rows: 11.14vw 11.14vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.52vw;
+}
+
+.gallery .gallery-wrap a:first-of-type {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.gallery .gallery-wrap img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery #gallery-second {
+    margin-top: 60px;
+    display: none;
+}
+
+.gallery .more-button, .gallery .less-button {
+    display: block;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #2c4058;
     text-decoration: none;
-    line-height: 56px;
+    line-height: 50px;
     color: #2c4058;
     font-family: "Gotham-Book";
     font-size: 14px;
@@ -313,8 +574,15 @@ header .header-arrow img {
     text-transform: uppercase;
     text-align: center;
     box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 60px;
 }
 
-.what .right {
-    flex-direction: row-reverse;
+.gallery .more-button:hover, .gallery .less-button:hover {
+    background-color: #2c4058;
+    color: #fff;
+}
+
+.gallery .less-button {
+    display: none;
 }

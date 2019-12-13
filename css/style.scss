@@ -5,6 +5,7 @@
 body {
     background-color: #fff;
     font-family: "Gotham";
+    font-weight: 400;
 }
 header {
     background-color: #fff;
@@ -70,10 +71,11 @@ header {
 
     .header-slider {
         .slick-dots {
-            position: absolute;
-            transform: rotate(90deg);
-            top: 0;
-            right: -15vw;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            align-items: flex-end;
+            top: 40%;
         }
         .slick-dots li img:nth-child(1) {
             display: block;
@@ -96,6 +98,10 @@ header {
         padding-top: 370px;
         padding-bottom: 315px;
         background-image: url('../img/header-slider-bg.jpg');
+        background-color: lightskyblue;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         h1 {
             color: #ffffff;
             font-size: 80px;
@@ -137,12 +143,13 @@ header {
     background-color: #fff;
     padding-top: 120px;
     padding-bottom: 100px;
-    .what-main-header {
+    #what-i-do {
         @extend %headers;
         text-align: center;
         position: relative;
+        margin-bottom: 100px;
     }
-    .what-main-header:before {
+    #what-i-do:before {
         content: "";
         position: absolute;
         width: 100px;
@@ -156,30 +163,46 @@ header {
         display: flex;
         padding-top: 100px;
         .building-picture {
-            width: 45%;
-            //height: 500px;
-            margin-right: 30px;
-            position: relative;
+            width: 50%;
+            margin-left: 215px;
+            font-size: 0;
             img {
-                position: absolute;
+                box-shadow: -215px -70px #55b7ff;
                 width: 80%;
                 height: auto;
-                bottom: 0;
-                right: 0;
-                z-index: 1;
+                
             }
-            
-        }
-        .building-picture-bg {
-            width: 80%; 
-            height: 80%;
-            background-color: #55b7ff;
-            position: absolute;
-            z-index: 0;
         }
         .building-text {
-            padding-top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             width: 30%;
+            a {
+                display: block;
+                width: 190px;
+                height: 50px;
+                border: 1px solid #2c4058;
+                text-decoration: none;
+                line-height: 50px;
+                color: #2c4058;
+                font-family: "Gotham-Book";
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                box-sizing: border-box;
+                margin-top: 35px;
+                margin-bottom: 60px;
+            }
+            a:hover {
+                background-color: #2c4058;
+                color: #fff;
+            }
+            img {
+                height: 18px;
+                margin-right: 5px;
+            }
         }
         h5 {
             color: #2c4058;
@@ -192,7 +215,7 @@ header {
         h1 {
             @extend %headers;
             color: #2c4058;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
         p {
             color: #4b5562;
@@ -201,21 +224,235 @@ header {
             font-weight: 400;
             line-height: 30px;
         }
-        a {
-            text-decoration: none;
-            line-height: 56px;
-            color: #2c4058;
-            font-family: "Gotham-Book";
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            text-align: center;
-            box-sizing: border-box;
+        i {
+            font-style: italic;
+            color: #2c4058;;
         }
+        
     }
 
     .right {
         flex-direction: row-reverse;
+        .building-picture {
+            margin-right: 215px;
+            text-align: right;
+            margin-left: 0;
+            img {
+                box-shadow: 215px -70px #7e5aff;
+            }
+        }
+        .building-text {
+            padding-left: 215px;
+        }
     }
     
+}
+
+.news {
+    background-image: url('../img/news-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 181px;
+    padding-bottom: 209px;
+    >h1 {
+        @extend %headers;
+        text-align: center;
+        position: relative;
+        margin-bottom: 100px;
+        color: #fff;
+    }
+    >h1:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: #fff;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .news-slider {
+        width: 77.6%;
+        max-width: 1170px;
+        margin: 0 auto;
+        .slick-dots {
+            bottom: -60px;
+        }
+        .slick-dots li img:nth-child(1) {
+            display: block;
+        }
+        
+        .slick-dots li img:nth-child(2) {
+            display: none;
+        }
+        
+        .slick-dots li.slick-active img:nth-child(1) {
+            display: none;
+        }
+        
+        .slick-dots li.slick-active img:nth-child(2) {
+            display: block;
+        }
+        .slick-prev:before {
+            display: none;
+        }
+        .slick-prev {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url('../img/slider-arrow-left.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40% auto;
+            z-index: 2;
+            border: 1px solid #cadff4;
+            border-radius: 50%;
+            left: -60px;
+        }
+        .slick-prev:hover {
+            border: 1px solid #fff;
+            background-image: url('../img/slider-arrow-left-hover.svg');
+        }
+        .slick-next:before {
+            display: none;
+        }
+        .slick-next {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url('../img/slider-arrow-right.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40% auto;
+            z-index: 2;
+            border: 1px solid #cadff4;
+            border-radius: 50%;
+            right: -60px;
+        }
+        .slick-next:hover {
+            border: 1px solid #fff;
+            background-image: url('../img/slider-arrow-right-hover.svg');
+        }
+    }
+    .news-slide {
+        width: 370px;
+        background-color: #fff;
+        padding-bottom: 30px;
+        margin: 0 15px;
+        > img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.55;
+            text-transform: uppercase;
+            padding-left: 21px;
+            padding-bottom: 15px;
+            color: #2c4058;
+            max-width: 320px;
+        }
+        p {
+            color: #4b5562;
+            font-family: 'Open Sans';
+            font-size: 18px;
+            line-height: 1.667;
+            padding-left: 21px;
+            padding-bottom: 30px;
+            max-width: 320px;
+        }
+        .slide-autor {
+            padding-left: 21px;
+            img {
+                float: left;
+                margin-right: 20px;
+            }
+            h3 {
+                padding-top: 10px;
+                color: #2c4058;
+                font-family: "Gotham-Book";
+                font-size: 18px;
+                line-height: 1.22;
+                text-transform: uppercase;
+            }
+            h4 {
+                color: #55b7ff;
+                font-family: "Gotham-Book";
+                font-size: 14px;
+                line-height: 1.5714;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding-top: 181px;
+    padding-bottom: 139px;
+    h1 {
+        @extend %headers;
+        text-align: center;
+        position: relative;
+        margin-bottom: 100px;
+        color: #2c4058;;
+    }
+    h1:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: #2c4058;;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .gallery-wrap {
+        width: 60.93vw;
+        margin: 0 auto;
+        display: grid;
+        font-size: 0;
+        display: grid;
+        grid-template-rows: 11.14vw 11.14vw;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.52vw;
+        a:first-of-type {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    #gallery-second {
+        margin-top: 60px;
+        display: none;
+    }
+    .more-button, .less-button {
+        display: block;
+        width: 190px;
+        height: 50px;
+        border: 1px solid #2c4058;
+        text-decoration: none;
+        line-height: 50px;
+        color: #2c4058;
+        font-family: "Gotham-Book";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    .more-button:hover, .less-button:hover {
+        background-color: #2c4058;
+        color: #fff;
+    }
+    .less-button {
+        display: none;
+    }
 }

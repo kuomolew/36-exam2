@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">  <!-- Font awesome -->
-
     <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css"/>
+
+    <link type="text/css" rel="stylesheet" href="plugins/lightgallery/src/css/lightgallery.css" /> 
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
      <title>Title</title> 
@@ -20,9 +20,9 @@
         <div class="menu">
             <a href="index.html"><img src="img/Logo.png"></a>
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">news</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li id="projects-scroll"><a href="#projects">projects</a></li>
+                <li id="news-scroll"><a href="#news">news</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
             <div class="menu-social">
@@ -54,17 +54,16 @@
             </div>
         </div>
        
-        <a href="#what-i-do" class="header-arrow">
+        <a href="#gallery" class="header-arrow">
             <img src="img/arrow.png">
         </a>
         
     </header>
 
-    <section class="what">
-        <h1 class="what-main-header">What we do</h1>
+    <section class="what" id="projects">
+        <h1 id="what-i-do">What we do</h1>
         <div class="building">
             <div class="building-picture">
-                <div class="building-picture-bg"></div>
                 <img src="img/building-picture1.jpg">
             </div>
             <div class="building-text">
@@ -72,27 +71,154 @@
                 <h1>Trade Center</h1>
                 <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
                 <a href="#">more details</a>
-                <p><i>New York City, United States - 1776 feet</i></p>
+                <p><img src="img/pointer.svg"><i>New York City, United States - 1776 feet</i></p>
             </div>
         </div>
 
         <div class="building right">
             <div class="building-picture">
-                <div class="building-picture-bg"></div>
-                <img src="img/building-picture1.jpg">
+                <img src="img/building-picture2.jpg">
             </div>
             <div class="building-text">
                 <h5>One World</h5>
                 <h1>Trade Center</h1>
                 <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
                 <a href="#">more details</a>
-                <p><i>New York City, United States - 1776 feet</i></p>
+                <p><img src="img/pointer.svg"><i>New York City, United States - 1776 feet</i></p>
             </div>
         </div>
 
     </section>
-    
-    <script src="js/script.js"></script>
+
+    <section class="news" id="news">
+        <h1>latest news</h1>
+        <div class="news-slider">
+            <div class="news-slide">
+                <img src="img/slide-pic-1.jpg">
+                <h1>See The Unmatched Beauty Of The Great</h1>
+                <p>Free directories: directories are perfect for customers that are... </p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-1.jpg">
+                    <h3>Isaac Dunn</h3>
+                    <h4>09 Feb 2017</h4>
+                </div>
+            </div>
+
+            <div class="news-slide">
+                <img src="img/slide-pic-2.jpg">
+                <h1>Effective Advertising Pointers. </h1>
+                <p>Having a home based business is a wonderful asset to your life...</p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-2.jpg">
+                    <h3>Dominic Freeman</h3>
+                    <h4>24 Apr 2017</h4>
+                </div>
+            </div>
+
+            <div class="news-slide">
+                <img src="img/slide-pic-3.jpg">
+                <h1>Hypnotize Yourself Into The Ghost.</h1>
+                <p>There are many things that are important to catalog design....</p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-3.jpg">
+                    <h3>Alice Ward</h3>
+                    <h4>30 Dec 2017</h4>
+                </div>
+            </div>
+
+            <div class="news-slide">
+                <img src="img/slide-pic-1.jpg">
+                <h1>See The Unmatched Beauty Of The Great.</h1>
+                <p>Free directories: directories are perfect for customers that are... </p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-1.jpg">
+                    <h3>Isaac Dunn</h3>
+                    <h4>09 Feb 2017</h4>
+                </div>
+            </div>
+
+            <div class="news-slide">
+                <img src="img/slide-pic-1.jpg">
+                <h1>See The Unmatched Beauty Of The Great.</h1>
+                <p>Free directories: directories are perfect for customers that are... </p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-1.jpg">
+                    <h3>Isaac Dunn</h3>
+                    <h4>09 Feb 2017</h4>
+                </div>
+            </div>
+
+            <div class="news-slide">
+                <img src="img/slide-pic-1.jpg">
+                <h1>See The Unmatched Beauty Of The Great.</h1>
+                <p>Free directories: directories are perfect for customers that are... </p>
+                <div class="slide-autor">
+                    <img src="img/slide-autor-1.jpg">
+                    <h3>Isaac Dunn</h3>
+                    <h4>09 Feb 2017</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h1>Gallery</h1>
+        <div id="gallery-first" class="gallery-wrap">
+
+            <a href="img/gallery-img-1-big.jpg" title="Gallery Image">
+                <img src="img/gallery-img-1.jpg">
+            </a>
+
+            <a href="img/gallery-img-2.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-2.jpg">
+            </a>
+
+            <a href="img/gallery-img-3.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-3.jpg">
+            </a>
+
+            <a href="img/gallery-img-4.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-4.jpg">
+            </a>
+
+            <a href="img/gallery-img-5.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-5.jpg">
+            </a>
+
+        </div>
+        <a class="more-button" href="#">see more</a>
+        <div id="gallery-second" class="gallery-wrap">
+
+            <a href="img/gallery-img-1-big.jpg" title="Gallery Image">
+                <img src="img/gallery-img-1.jpg">
+            </a>
+
+            <a href="img/gallery-img-2.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-2.jpg">
+            </a>
+
+            <a href="img/gallery-img-3.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-3.jpg">
+            </a>
+
+            <a href="img/gallery-img-4.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-4.jpg">
+            </a>
+
+            <a href="img/gallery-img-5.jpg" class="quoter" title="Gallery Image">
+                <img src="img/gallery-img-5.jpg">
+            </a>
+
+        </div>
+
+        <a class="less-button" href="#">see less</a>
+    </section>
+
     <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+
+    <script src="plugins/lightgallery/src/js/lightgallery.js"></script>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
